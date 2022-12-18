@@ -47,30 +47,7 @@
             }
         },
         created(){
-            window.$('body', () => {
-                let url = "http://localhost:8082/api/usuarios";
-                var body = window.$('#usuarios');
-
-                window.$.ajax({
-                    type: "GET",
-                    url: url,
-                    dataType: "json",
-                    success: function (response) {
-                        response.forEach((element) => {
-                            var row = document.createElement('tr');
-                            const arrayOfValues = Object.values(element);
-
-                            for(let i = 0; i < arrayOfValues.length; i++){
-                                var column = document.createElement('td');
-                                column.innerText = arrayOfValues[i]
-                                row.append(column);
-                            }
-
-                            body.append(row);
-                        });
-                    }
-                });
-            })
+            
         },
       
     }
@@ -244,4 +221,69 @@ button{
     font-weight: bold;
 }
 
+.input-custom{
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 4px solid #f2f2f2;
+    outline: none;
+}
+
+.card_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 16px 8px;
+}
+
+.card{
+    border-top: #f9ae00 8px solid;
+    box-shadow: 5px 4px 20px 1px rgba(0,0,0,0.5);
+    margin: 8px 16px;
+    border-radius: 8px;
+    padding: 16px 8px;
+}
+
+.card > h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+.card > h3 > span{
+    color: rgb(46, 245, 46);
+    font-size: 18px;
+}
+
+.btn_box{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px auto;
+}
+
+.more_info_btn{
+    background-color: #22d3ee;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color:white;
+    border-bottom: 2px solid #06b6d4;
+    margin: 0 4px;
+}
+
+.delete_btn{
+    background-color: #ef4444;
+    padding: 4px 8px;
+    border-radius: 8px;
+    color:white;
+    border-bottom: 2px solid #dc2626;
+    margin: 0 4px;
+
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw !important;
+    min-height: 80vh;
+}
 </style>

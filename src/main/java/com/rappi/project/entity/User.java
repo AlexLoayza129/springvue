@@ -38,7 +38,7 @@ public class User {
     private String apellidos;
     
     @Column(name="correo")
-    private String correo;
+    private String email;
     
     @Column(name="contrasena")
     private String contrasena;
@@ -71,11 +71,16 @@ public class User {
 		this.apellidos = apellidos;
 	}
 	
-	public String getCorreo() {
-		return correo;
+	public String getEmail() {
+		return email;
 	}
-	public void setCorreo(String correo) {
-		this.correo = correo;
+
+	public String getEmailByText(String text){
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String getContrasena() {
@@ -102,6 +107,6 @@ public class User {
     
     @Override
 	public String toString(){
-		return "Usuario [id=" + id + ",rolId=" + rolId +", nombres=" + nombres + ", apellidos=" + apellidos + ", correo=" + correo + ", contrasena=" + contrasena + ", telefono=" + telefono + ", direccion=" + direccion + "]";
+		return "Usuario [id=" + id + ",rolId=" + rolId +", nombres=" + nombres + ", apellidos=" + apellidos + ", correo=" + email + ", contrasena=" + contrasena + ", telefono=" + telefono + ", direccion=" + direccion + "]";
 	}
 }

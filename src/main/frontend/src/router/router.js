@@ -23,6 +23,11 @@ const routes = [
         name: "Usuarios",
         component: () => import("@/components/usuario/UsuariosComponent.vue")
     },
+    {
+        path: '/login',
+        name: 'Logeo',
+        component: () => import("@/components/auth/LoginComponent.vue")
+    },
     // Create "" Routes
     {
         path: "/proveedores/crear",
